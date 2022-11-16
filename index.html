@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221014171208">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221112175816">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700&display=swap&_v=20221014171208" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700&display=swap&_v=20221112175816" rel="stylesheet">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -18,15 +18,17 @@
 		<header class="header">
 			<div class="header__container">
 				<div class="header__top">
-					<a href="#" class="header__logo">
+					<a href="index.html" class="header__logo">
 						<img src="img/svg/logo.svg" alt="logo">
 					</a>
-					<a href="#" class="header__addres">
+					<a data-da=".header__info-block, 767.98, 1" target="_blank" href="https://goo.gl/maps/wTaNjtvJC94EgqicA" class="header__addres">
 						<img src="img/svg/location.svg" alt="location">
-						<span>Country, City, Office</span>
+						<span>5201 Tollview Dr
+							Rolling Meadows, IL 60008
+							United States</span>
 					</a>
 					<div data-da=".menu__body, 767.98, 2" class="header__info-block">
-						<a href="tel:#" class="header__phone">(555) 555-1234</a>
+						<a href="tel:17739862565" class="header__phone">+1 (773) 986-2565</a>
 						<div class="header__time-work">
 							Daily from 10 am to 8 pm without days off
 						</div>
@@ -38,25 +40,25 @@
 						<nav class="menu__body">
 							<ul class="menu__list">
 								<li class="menu__item">
-									<a href="" class="menu__link _active">Home</a>
+									<a href="index.html" class="menu__link _active">Home</a>
 								</li>
 								<li class="menu__item">
-									<a href="" class="menu__link">Printing</a>
+									<a href="#" data-goto=".about" class="menu__link">ABOUT US</a>
 								</li>
 								<li class="menu__item">
-									<a href="" class="menu__link">About Us</a>
+									<a href="#" data-goto=".why" class="menu__link">WHY CHOOSE US</a>
 								</li>
 								<li class="menu__item">
-									<a href="" class="menu__link">Services</a>
+									<a href="#" data-goto=".customer" class="menu__link">REVIEWS</a>
 								</li>
 								<li class="menu__item">
-									<a href="" class="menu__link">Pricing</a>
+									<a href="#" data-goto=".services" class="menu__link">SERVICES</a>
 								</li>
 								<li class="menu__item">
-									<a href="" class="menu__link">Get in Touch</a>
+									<a href="#" data-goto=".result" class="menu__link">RESULT</a>
 								</li>
 								<li class="menu__item">
-									<a href="" class="menu__link">Blog</a>
+									<a href="#" data-goto=".request" class="menu__link">REQUEST</a>
 								</li>
 							</ul>
 						</nav>
@@ -406,7 +408,7 @@
 					<div class="result__body">
 						<div class="result__title-block">
 							<div class="result__number number">05</div>
-							<h2 class="result__title title">customer reviews</h2>
+							<h2 class="result__title title">The result of the work</h2>
 						</div>
 						<div data-da=".result, 991.98, 3" class="result__buttons">
 							<button type="button" class="swiper-button-prev-result">
@@ -455,9 +457,9 @@
 					<div class="request__text">
 						At any time, we will call you back within 10 minutes. We will discuss the tasks, find the optimal solution and plan the work. We will answer your questions and tell you more about our services. Let's be in touch!
 					</div>
-					<form action="#" method="POST" class="request__form-request form-request">
-						<input autocomplete="off" type="text" name="name" data-error="Ошибка" placeholder="YOUR NAME" class="form-request__input">
-						<input autocomplete="off" type="text" name="phone" data-error="Ошибка" placeholder="PHONE NUMBER" class="form-request__input">
+					<form action="telegram.php" method="POST" class="request__form-request form-request">
+						<input autocomplete="off" type="text" name="name" required="" data-error="Ошибка" placeholder="YOUR NAME" class="form-request__input">
+						<input autocomplete="off" type="text" name="phone" required="" data-error="Ошибка" placeholder="PHONE NUMBER" class="form-request__input">
 						<button type="submit" class="request__button button">
 							SEND
 						</button>
@@ -470,13 +472,27 @@
 		<footer class="footer">
 			<div class="footer__container">
 				<ul class="footer__menu">
-					<li><a href="#" class="footer__link _active">Home</a></li>
-					<li><a href="#" class="footer__link">Printing</a></li>
-					<li><a href="#" class="footer__link">About Us</a></li>
-					<li><a href="#" class="footer__link">Services</a></li>
-					<li><a href="#" class="footer__link">Pricing</a></li>
-					<li><a href="#" class="footer__link">Get in Touch</a></li>
-					<li><a href="#" class="footer__link">Blog</a></li>
+					<li class="menu__item">
+						<a href="#" data-goto=".main" class="footer__link">Home</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" data-goto=".about" class="footer__link">ABOUT US</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" data-goto=".why" class="footer__link">WHY CHOOSE US</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" data-goto=".customer" class="footer__link">REVIEWS</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" data-goto=".services" class="footer__link">SERVICES</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" data-goto=".result" class="footer__link">RESULT</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" data-goto=".request" class="footer__link">REQUEST</a>
+					</li>
 				</ul>
 				<div class="footer__body">
 					<div class="footer__left">
@@ -502,15 +518,18 @@
 						</ul>
 					</div>
 					<div class="footer__right">
-						<a href="tel:5555551234" class="footer__phone">(555) 555-1234</a>
+						<a href="tel:17739862565" class="footer__phone">+1 (773) 986-2565</a>
 						<div class="footer__work-time">
 							Daily from 10 am to 8 pm without days off
 						</div>
-						<a href="#" class="footer__location">
-							<img src="img/svg/location.svg" alt="location-icon"> Country, City, Office
+						<a href="https://goo.gl/maps/JhSarjNsCsxj1NZj8" target="_blank" class="footer__location">
+							<img src="img/svg/location.svg" alt="location-icon">5201 Tollview Dr Rolling Meadows, IL 60008 United States
 						</a>
 					</div>
 				</div>
+			</div>
+			<div class="develop">
+				Develop website <a href="https://bahtiiar.kg/">bahtiiar.com</a>
 			</div>
 		</footer>
 	</div>
@@ -524,7 +543,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20221014171208"></script>
+	<script src="js/app.min.js?_v=20221112175816"></script>
 </body>
 
 </html>
